@@ -1,0 +1,4 @@
+- labels 里可以有 app 这种 key 吗?
+- 什么时候写 yml 的时候需要带上 `-` 符号
+- `containerPort` 究竟有什么用？
+- 删除 deployments 的顺序是什么？pods? service? deployments?
