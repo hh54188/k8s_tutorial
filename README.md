@@ -16,6 +16,7 @@
   - targetPort
   - nodePort
 - `Deployment` VS `Replicas` VS `Pods` VS `Container`
+- 我怎么知道请求到了哪个 pod 里?
 
 ## Command
 - `kubectl delete -f [].yml`
