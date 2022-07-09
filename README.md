@@ -10,6 +10,12 @@
 - 删除 deployments 的顺序是什么？pods? service? deployments?
 - 有 `apps/v1`，有 `apps/v2` 吗
 - `apps/v1` 和 `v1` 有什么区别
+- Ports
+  - containerPort
+  - port
+  - targetPort
+  - nodePort
+- `Deployment` VS `Replicas` VS `Pods` VS `Container`
 
 ## Command
 - `kubectl delete -f [].yml`
