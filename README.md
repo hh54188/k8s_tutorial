@@ -1,3 +1,5 @@
+## Q&A
+
 - 如何记住 yaml 结构
   - ([https://k8syaml.com/](https://k8syaml.com/))
 - labels 里可以有 app 这种 key 吗?
@@ -6,3 +8,8 @@
   - `-` 意味着列表中的一项 [https://www.reddit.com/r/ansible/comments/5jhff3/when_to_use_dash_in_yaml/](https://www.reddit.com/r/ansible/comments/5jhff3/when_to_use_dash_in_yaml/)
 - `containerPort` 究竟有什么用？
 - 删除 deployments 的顺序是什么？pods? service? deployments?
+- 有 `apps/v1`，有 `apps/v2` 吗
+- `apps/v1` 和 `v1` 有什么区别
+
+## Command
+- `kubectl delete -f [].yml`
