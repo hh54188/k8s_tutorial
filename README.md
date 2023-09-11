@@ -17,6 +17,7 @@
   - nodePort
 - `Deployment` VS `Replicas` VS `Pods` VS `Container`
 - 我怎么知道请求到了哪个 pod 里?
+- Service 的 selector 是谁的 selector? pod 的？
 
 ## Command
 - `kubectl delete -f [].yml`
