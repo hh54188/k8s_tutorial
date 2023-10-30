@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-web-app
+spec:
+  selector:
+    app: nodejs-web-app
+  ports:
+    - port: 80
+      targetPort: 8080
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-web-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nodejs-web-app
+  template:
+    metadata:
+      labels:
+        app: nodejs-web-app
+    spec:
+      containers:
+        - name: app
+          image: simple_docker_nodejs_image:1.0
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: IfNotPresent

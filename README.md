@@ -1,3 +1,9 @@
+## Todo
+
+- port?
+- 为什么 `imagePullPolicy: IfNotPresent` 会对本地 docker 镜像有效
+- 为什么无法直接访问，需要通过[特殊的地址访问](https://stackoverflow.com/a/40774861/508236)
+
 ## Q&A
 
 - 如何记住 yaml 结构
@@ -21,3 +27,7 @@
 
 ## Command
 - `kubectl delete -f [].yml`
+- `kubectl apply -f [].yml`
+- `kubectl describe pod [pod-name]`
+- `kubectl logs [pod-name]`
+- `kubectl logs --selector app=[]`
