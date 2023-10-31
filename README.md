@@ -2,6 +2,15 @@
 
 - port?
 - 为什么 `imagePullPolicy: IfNotPresent` 会对本地 docker 镜像有效
+  - 当你在本地用 minikube 运行 k8s 时，镜像来源似乎有三个：public remote docker registry (Docker Offical)、local docker registry (Docker Deamon)、minikube docker registry、
+  如果你不想让 minikube 从 public registry 拉取镜像，需要设置 `imagePullPolicy: Never`。但是这就会出现在 minikube registry 里也找不到镜像的情况，于是就会出现`ErrImageNeverPull`的错误，有两个解决办法
+    - 需要执行`eval $(minikube docker-env)`命令，将你本地的 docker-cli 连接上 VM（minikube）的 docker daemon，然后再重新 build 镜像，这也就能把镜像加入到 minikube docker registry 里面了（https://stackoverflow.com/questions/52310599/what-does-minikube-docker-env-mean）
+    - 执行 `minikube image load <image name>` 将镜像加入到 minikube 当中
+  - https://medium.com/swlh/how-to-run-locally-built-docker-images-in-kubernetes-b28fbc32cc1d
+  - https://stackoverflow.com/questions/42564058/how-can-i-use-local-docker-images-with-minikube
+  - (如果本地没有，就用远端的)IfNotPresent: If you set the imagePullPolicy to IfNotPresent, Kubernetes will only pull the image when it doesn’t already exist on the node.
+  - （忽略本地，永远用远端的）Always: With your imagePullPolicy set to Always, Kubernetes will always pull the latest version of the image from the container registry. 
+  - （只用本地，永远不用远端）Never: If you set the imagePullPolicy to Never, there will be no attempts to pull the image. 
 - 为什么无法直接访问，需要通过[特殊的地址访问](https://stackoverflow.com/a/40774861/508236)
 
 ## Q&A
