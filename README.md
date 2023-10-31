@@ -1,6 +1,7 @@
 ## Todo
 
 - port?
+- minikube VS kubectl
 - 为什么 `imagePullPolicy: IfNotPresent` 会对本地 docker 镜像有效
   - 当你在本地用 minikube 运行 k8s 时，镜像来源似乎有三个：public remote docker registry (Docker Offical)、local docker registry (Docker Deamon)、minikube docker registry、
   如果你不想让 minikube 从 public registry 拉取镜像，需要设置 `imagePullPolicy: Never`。但是这就会出现在 minikube registry 里也找不到镜像的情况，于是就会出现`ErrImageNeverPull`的错误，有两个解决办法
