@@ -6,6 +6,9 @@
   - service
     - port: service 监听的端口
     - targetPort: service 转发流量的端口（这个端口应该核 deployment 里面的 containerPort 一致？）
+- Cluster VS Node
+  - 什么是 cluster （集群）：多个机器合体成的一个机器就是 cluster（many machine act as one machine）
+  - Node: The smallest unit of computer hardware in a K8S cluster, it can be a physical server or VM
 - minikube VS kubectl
   - minikube: minikube 是一个假的集群，真的 k8s 需要动用到很多的机器或者资源
   - kubectl: 一个 CLI (Command Line Interface) 核 k8s 进行互动/沟通
